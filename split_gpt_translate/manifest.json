@@ -1,0 +1,16 @@
+{
+  "name": "ChatGPT Translator Chunked",
+  "version": "1.0.0",
+  "description": "原文を左に、ChatGPT翻訳を右に表示するChrome拡張（段落ごとに翻訳）",
+  "manifest_version": 3,
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"]
+    }
+  ]
+}
